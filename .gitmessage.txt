@@ -1,0 +1,18 @@
+# [Tarea o Issue] TIPO: descripción del cambio
+
+# Ejemplos:
+# ADD: botón para registro en el home
+# FIX: error en la lógica del login
+# REMOVE: archivo innecesario del landing
+#
+# Tipos permitidos:
+# - CREATE: primera implementación de una nueva feature
+# - ADD: se agregó algo a una funcionalidad existente
+# - FIX: se corrigió un bug o problema
+# - UPDATE: se mejoró o cambió algo existente
+# - REMOVE: se eliminó código, archivos o componentes
+# - REFACTOR: cambio de estructura sin alterar funcionalidad
+# - DOCS: documentación
+# - STYLE: ajustes visuales o de formato
+# - TEST: pruebas
+# - CONFIG: configuración

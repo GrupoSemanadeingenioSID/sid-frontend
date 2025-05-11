@@ -12,20 +12,68 @@
 ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-## Getting Started
+## Vamos a empezar
 
-First, run the development server:
+Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local.
+
+### 1. Clona el repositorio
+
+```bash
+git clone https://github.com/GrupoSemanadeingenioSID/sid-frontend.git
+```
+
+### 2. Entra a la carpeta del proyecto o abre la carpeta con Visual Studio Code
+
+```bash
+cd sid-frontend
+```
+
+### 3. Instala las dependencias
+
+```bash
+npm install
+```
+
+### 4. Ejecuta el proyecto en modo desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La aplicación estará disponible en: [http://localhost:3000](http://localhost:3000)
 
+## Configurar commit template (estándar de commits)
+
+Para asegurar un formato consistente en los mensajes de commit, ejecuta este comando dentro del proyecto:
+
+```bash
+git config commit.template "./.gitmessage.txt"
+```
+
+Luego cuando ya tengas los cambios añadidos usar:
+
+```bash
+git commit
+```
+
+Git abrirá el editor que tengas por defecto (como VS Code o Vim) con el template listo.
+
+Escribe tu commit en la línea superior, por ejemplo:
+```bash
+CREATE: componenente para los cursos
+```
+
+## Informacion de estilos
+### Paleta de colores
+![image](https://github.com/user-attachments/assets/ca8c8c43-52ab-4457-8d71-78e369861fe3)
+![image](https://github.com/user-attachments/assets/34b62702-a7e3-424a-a96c-d95731662e4d)
+
+
+### Tipografías
+### Nunito  
+Consultar tipografía en Google Fonts: [Nunito](https://fonts.google.com/specimen/Nunito)
+  
+### Lilita One  
+Consultar tipografía en Google Fonts: [Lilita One](https://fonts.google.com/specimen/Lilita+One?query=lilit)
