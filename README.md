@@ -64,6 +64,11 @@ Escribe tu commit en la línea superior, por ejemplo:
 ```bash
 CREATE: componenente para los cursos
 ```
+Presiona Esc para asegurarte de estar en el modo de comandos de Vim.
+
+Escribe :wq y presiona Enter para guardar los cambios y salir del editor.
+
+Si deseas salir sin guardar, usa :q! y presiona Enter.
 
 ## Informacion de estilos
 ### Paleta de colores
