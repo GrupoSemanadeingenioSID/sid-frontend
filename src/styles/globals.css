@@ -10,6 +10,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --french-gray: #cdd5dc;
+  --eerie-black: #1a222a;
+  --lapiz-lazuli: #135e8c;
+  --davys-gray: #515151;
+  --russian-violet: #321558;
+  --night: #0d0d0d;
+  --argentinian-blue: #48b9ff;
+  --indigo-dye: #00447c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,5 +26,3 @@
     --foreground: #ededed;
   }
 }
-
-
