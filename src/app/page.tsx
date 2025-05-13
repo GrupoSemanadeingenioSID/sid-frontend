@@ -5,17 +5,17 @@ export default function Home() {
     <div>
         <header></header> {/* ESPACIO PARA EL COMPONENTE HEADER */}
 
-        <main>
+        <main className="bg-[url(/images/background.png)] bg-cover bg-no-repeat">
           {/* SECCION PARA EL BANNER */}
           <section>
-
+              
           </section>
 
           {/* SECCION PARA EL CONTENIDO */}
           <section>
             {/* ARTICULO PARA LAS ACTIVIDADES */}
             <article>
-
+  
             </article>
 
             {/* ARTICULO PARA LOS CURSOS */}
