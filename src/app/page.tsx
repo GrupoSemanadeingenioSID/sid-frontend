@@ -1,9 +1,10 @@
 import { lilita } from "./layout";
-
 export default function Home() {
   return (
     <div>
-        <header></header> {/* ESPACIO PARA EL COMPONENTE HEADER */}
+        <header>
+          
+        </header> {/* ESPACIO PARA EL COMPONENTE HEADER */}
 
         <main className="bg-[url(/images/background.png)] bg-cover bg-no-repeat">
           {/* SECCION PARA EL BANNER */}

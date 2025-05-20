@@ -1,8 +1,8 @@
+import Header from "@/components/Header/Header";
 export default function Team() {
   return (
     <div>
-      <h1>Welcome to Next.js!</h1>
-      <p>This is a simple Next.js application.</p>
+      <Header/>
     </div>
   );
 }
