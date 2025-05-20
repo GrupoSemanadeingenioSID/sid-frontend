@@ -25,6 +25,12 @@ export default function Header() {
                 <span className='text-black text-5xl font-extralight'>|</span>
                 <Image src="/images/logotype/logosid.webp" alt="LogoSid" width={65} height={65}/>
             </div>
+            {/**Menu PC */}
+            <div className="hidden md:flex space-x-4">
+                <button className="border px-3 py-1 rounded hover:bg-gray-200">Opción 1</button>
+                <button className="border px-3 py-1 rounded hover:bg-gray-200">Opción 2</button>
+                <button className="border px-3 py-1 rounded hover:bg-gray-200">Opción 3</button>
+            </div>
             {/** Boton de notificacion */}
             <div className="flex justify-between items-center px-10 w-50 max-w-xs mx-auto">
                 <div className="border rounded-full p-2">
@@ -36,16 +42,9 @@ export default function Header() {
                         <Image src="/images/icons/menu.svg" alt='menu' height={30} width={30}/>
                     </button>
                 </div>
+            {/**Desplegable Celular */}
             </div>
-            {/**Menu PC */}
-            <div className="hidden md:flex space-x-4">
-                <button className="border px-3 py-1 rounded hover:bg-gray-200">Opción 1</button>
-                <button className="border px-3 py-1 rounded hover:bg-gray-200">Opción 2</button>
-                <button className="border px-3 py-1 rounded hover:bg-gray-200">Opción 3</button>
-            </div>
-            {/**No sirve la animacion */}
-            {isOpen && (
-                <div className={`fixed right-0 top-0 h-full w-full bg-[url('/images/background-menu.png')] bg-cover bg-center bg-no-repeat z-50 flex flex-col items-center justify-center md:hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'} transform transition-transform`}>
+                <div className={`fixed right-0 top-0 h-full w-full bg-[url('/images/background-menu.png')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center md:hidden ${isOpen ? 'translate-x-0 pointer-events-auto' : 'translate-x-full pointer-events-none'} transform transition-transform duration-250 ease-in-out`}>
                     <div ref={menuRef} className="w-full h-full p-5 flex flex-col gap-4 items-center">
                         <button className="self-end text-2xl font-bold mb-4 text-white" onClick={()=>setIsOpen(false)}>
                             X
@@ -71,7 +70,6 @@ export default function Header() {
                         </button>
                     </div>
                 </div>
-            )}
         </header>
     )
 }
