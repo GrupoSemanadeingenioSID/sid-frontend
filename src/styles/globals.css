@@ -51,3 +51,7 @@ body {
 .text-davys-gray {
   color: var(--davys-gray);
 }
+
+.border-french-gray {
+  border-color: var(--french-gray);
+}
