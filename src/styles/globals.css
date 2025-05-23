@@ -10,7 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --french-gray: #cdd5dc;
+  --french-gray: #ced5dc;
   --eerie-black: #1a222a;
   --lapiz-lazuli: #135e8c;
   --davys-gray: #515151;
@@ -24,10 +24,34 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --french-gray: #cdd5dc;
+    --french-gray: #ced5dc;
   }
 }
 
 body {
   color: var(--french-gray);
+}
+
+.bg-french-gray {
+  background-color: var(--french-gray);
+}
+
+.bg-lapiz-lazuli {
+  background-color: var(--lapiz-lazuli);
+}
+
+.text-lapiz-lazuli {
+  color: var(--lapiz-lazuli);
+}
+
+.text-eerie-black {
+  color: var(--eerie-black);
+}
+
+.text-davys-gray {
+  color: var(--davys-gray);
+}
+
+.border-french-gray {
+  border-color: var(--french-gray);
 }

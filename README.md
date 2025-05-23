@@ -82,3 +82,51 @@ Consultar tipografía en Google Fonts: [Nunito](https://fonts.google.com/specime
   
 ### Lilita One  
 Consultar tipografía en Google Fonts: [Lilita One](https://fonts.google.com/specimen/Lilita+One?query=lilit)
+
+### Diseño responsivo
+
+El proyecto utiliza las utilidades de Tailwind CSS para lograr un diseño completamente responsivo. Las principales breakpoints usadas son:
+
+- **Celular:**  
+  `min-width: 380px` (por defecto, sin clases de breakpoint)  
+  Ejemplo: `className="p-4"`
+
+- **Tablet:**  
+  `md` (`min-width: 768px`)  
+  Ejemplo: `className="md:p-8"`
+
+- **Escritorio:**  
+  `lg` (`min-width: 1024px`)  
+  Ejemplo: `className="lg:p-12"`
+
+- **Pantallas grandes:**  
+  `xl` (`min-width: 1280px`)  
+  `2xl` (`min-width: 1536px`)  
+  Ejemplo: `className="2xl:px-40"`
+
+## 🚀 Iconos con Lucide
+
+Este proyecto utiliza [Lucide](https://lucide.dev/) como librería de iconos en React. Lucide es una colección moderna y ligera de iconos SVG open source.
+
+### Instalación
+
+La libreria ya esta instalada en la rama principal, si trabajas en una rama distinta debes actualizar tu rama y ejecutar el comando: 
+
+```bash
+npm install
+```
+
+### Cómo usarlo en la aplicación
+
+```tsx
+import { Timer } from 'lucide-react';
+
+function App() {
+  return (
+    <div>
+      <h1>Ejemplo de Iconos con Lucide</h1>
+      <Timer className="w-4 h-4 text-lapiz-lazuli mr-1 lg:w-5 lg:h-5" />
+    </div>
+  );
+}
+```
