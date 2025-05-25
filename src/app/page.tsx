@@ -4,7 +4,7 @@ import CourseCard from "@/components/courses/courseCard";
 
 export default function Home() {
 
-  let courses = [1, 2, 3]
+  const courses = [1, 2, 3]
 
   return (
     <div>
