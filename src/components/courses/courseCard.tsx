@@ -1,11 +1,12 @@
 import { Timer } from 'lucide-react';
+import Image from 'next/image';
 
 export default function CourseCard() { 
     return (
         <article className="flex flex-col h-auto w-full hover:scale-105 transition-all gap-2.5 bg-french-gray rounded-3xl p-2.5 md:w-[30%]  lg:w-[28%]">
             {/* IMAGEN DEL CURSO */}
             <div className="h-1/2 w-auto rounded-3xl overflow-hidden">
-                <img src="/images/course/diseño.webp" className="w-full h-full bg-cover" alt="Course Image" />
+                <Image src="/images/course/diseño.webp" className="w-full h-full bg-cover" width={800} height={534} alt="Course Image" />
             </div>
 
             {/* CONTENIDO DEL CURSO */}
@@ -13,7 +14,7 @@ export default function CourseCard() {
                 {/* PROFESOR DEL CURSO */}
                 <div className="flex items-center justify-between">
                     <div className="h-6 w-6 rounded-full overflow-hidden lg:h-10 lg:w-10">
-                        <img src="/images/teacher/juanprofe.webp" className="w-full h-full bg-cover" alt="Teacher Image" />
+                        <Image src="/images/teacher/juanprofe.webp" className="w-full h-full bg-cover" width={200} height={133} alt="Teacher Image" />
                     </div>
                     
                     <p className="font-bold text-xs text-center text-davys-gray lg:text-sm">Richard Eduardo</p>

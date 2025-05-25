@@ -1,7 +1,12 @@
-import { lilita } from "./layout";
+import { Lilita_One } from 'next/font/google';
 import Link from "next/link";
 import CourseCard from "@/components/courses/courseCard";
-import { TeamCard } from "@/components/team/teamCard";
+
+const lilita = Lilita_One({
+  subsets: ["latin"],
+  variable: "--font-lilita",
+  weight: "400",
+});
 
 export default function Home() {
 
@@ -43,14 +48,16 @@ export default function Home() {
     <div>
       <header></header> {/* ESPACIO PARA EL COMPONENTE HEADER */}
 
-      <main className="bg-[url(/images/background.png)] bg-cover bg-no-repeat">
+      <main className="">
         {/* SECCION PARA EL BANNER */}
-        <section>
-
+        <section className="bg-[url(/images/banner.webp)] bg-cover bg-center bg-no-repeat h-dvh w-full flex flex-col items-center justify-end lg:h-screen">
+          <div className={`${lilita.className} text-4xl text-center w-full h-2/5 flex items-end justify-center banner-gradient py-7 px-[20%] lg:text-5xl lg:py-16`}>
+            <p>¡Te damos la bienvenida!</p>
+          </div>
         </section>
 
         {/* SECCION PARA EL CONTENIDO */}
-        <section className="flex flex-col py-5 px-10 gap-5 lg:px-40">
+        <section className="flex flex-col py-5 px-10 gap-5 lg:px-40 bg-[url(/images/background.png)] bg-cover bg-no-repeat">
           {/* ARTICULO PARA LAS ACTIVIDADES */}
           <article>
 
