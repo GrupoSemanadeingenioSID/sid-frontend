@@ -1,6 +1,12 @@
-import { lilita } from "./layout";
+import { Lilita_One } from 'next/font/google';
 import Link from "next/link";
 import CourseCard from "@/components/courses/courseCard";
+
+const lilita = Lilita_One({
+  subsets: ["latin"],
+  variable: "--font-lilita",
+  weight: "400",
+});
 
 export default function Home() {
 
