@@ -1,10 +1,43 @@
 import { lilita } from "./layout";
 import Link from "next/link";
 import CourseCard from "@/components/courses/courseCard";
+import { TeamCard } from "@/components/team/teamCard";
 
 export default function Home() {
 
   let courses = [1, 2, 3]
+  const team = [
+    {
+      nombre: "Angélica",
+      rol: "Desarrolladora",
+      foto: "/images/team/angelica.webp",
+      alt: "Foto de Angélica"
+    },
+    {
+      nombre: "Diego",
+      rol: "Desarrollador",
+      foto: "/images/team/diego.webp",
+      alt: "Foto de Diego"
+    },
+        {
+      nombre: "Javier",
+      rol: "Desarrolladora",
+      foto: "/images/team/javier.webp",
+      alt: "Foto de Javier"
+    },
+    {
+      nombre: "Juan Carlos",
+      rol: "Desarrollador",
+      foto: "/images/team/juancarlos.webp",
+      alt: "Foto de Juan Carlos"
+    },
+        {
+      nombre: "Sara",
+      rol: "Desarrolladora",
+      foto: "/images/team/sara.webp",
+      alt: "Foto de Sara"
+    },
+  ];
 
   return (
     <div>
@@ -42,7 +75,16 @@ export default function Home() {
           </article>
 
           {/* ARTICULO PARA LOS EQUIPOS*/}
-          <article>
+          <article className="">
+            
+            <h2 className="">Cursos disponibles</h2>
+
+            <div className="">
+              {team.map((miembro, index) => (
+                <TeamCard key={index} {...miembro}/>
+              ))}
+
+            </div>
 
           </article>
         </section>
