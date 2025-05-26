@@ -7,21 +7,21 @@ type TeamCardProps = {
   alt?: string;
 };
 
-export function TeamCard({ nombre, rol, foto, alt }: TeamCardProps): React.JSX.Element {
+export default function TeamCard({ nombre, rol, foto, alt }: TeamCardProps): React.JSX.Element {
 	return(
-		<article className="">
+		<article className="flex flex-col w-[140px] h-[252] bg-(--russian-violet) rounded-[200px] justify-center">
 			{/* INFORMACIÓN DEL INTEGRANTE */}
-			<header className="">
+			<header className="flex flex-col text-center">
 				<h3 className=""> {nombre} </h3>
 				<p className=""> {rol} </p>
 			</header>
-			<figure className="">
+			<figure className="w-[140px] h-[144px] rounded-full relative bottom-[-30px]">
 				<Image
 					src={foto}
 					alt={alt ?? `Foto de ${nombre}`}
-					className=""
-					width={200}
-					height={500}
+					className="w-[140px] h-[144px] rounded-full"
+					width={140}
+					height={144}
 				/>
 			</figure>
 		</article>
