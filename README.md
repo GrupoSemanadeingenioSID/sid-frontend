@@ -73,7 +73,7 @@ Si deseas salir sin guardar, usa :q! y presiona Enter.
 ## Informacion de estilos
 ### Paleta de colores
 ![image](https://github.com/user-attachments/assets/ca8c8c43-52ab-4457-8d71-78e369861fe3)
-![image](https://github.com/user-attachments/assets/34b62702-a7e3-424a-a96c-d95731662e4d)
+![image](https://github.com/user-attachments/assets/877b131a-6de2-48ea-895d-2cd3510a7eb9)
 
 
 ### Tipografías
