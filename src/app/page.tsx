@@ -1,6 +1,7 @@
 import { Lilita_One } from 'next/font/google';
 import Link from "next/link";
 import CourseCard from "@/components/courses/courseCard";
+import Header from '@/components/Header/Header';
 
 const lilita = Lilita_One({
   subsets: ["latin"],
@@ -13,7 +14,9 @@ export default function Home() {
 
   return (
     <div>
-      <header></header> {/* ESPACIO PARA EL COMPONENTE HEADER */}
+      <header>
+        <Header/>
+      </header> {/* ESPACIO PARA EL COMPONENTE HEADER */}
 
       <main className="">
         {/* SECCION PARA EL BANNER */}
