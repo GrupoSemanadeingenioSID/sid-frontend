@@ -12,7 +12,7 @@ export default function TeamCard({ nombre, rol, foto, alt }: TeamCardProps): Rea
 		<article className="flex flex-col bg-[var(--russian-violet)] rounded-[200px]
              justify-between
              flex-shrink-0
-             w-[clamp(140px,45vw,175px)] md:w-[clamp(200px,20vw,200px)]
+             w-[clamp(130px,min(36.842vw,46%),150px)] md:w-[clamp(175px,15%,200px)]
              h-[15.75rem] md:h-[clamp(252px,20rem,360px)]
              gap-2.5
              snap-start
