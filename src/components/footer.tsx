@@ -6,6 +6,7 @@ import {
   Twitter,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -28,17 +29,23 @@ export default function Footer() {
             <div className="w-full h-10 p-2.5 gap-2.5">
               <h3 className="font-bold text-sm text-[#135e8c]">Información</h3>
             </div>
-            <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
-              Quienes somos
-            </button>
-            <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
-              {" "}
-              Proyectos
-            </button>
-            <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
-              {" "}
-              Aliados
-            </button>
+            <Link href="#Quienes_somos" target="blank">
+              <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
+                Quienes somos
+              </button>
+            </Link>
+            <Link href="#Proyectos" target="blank">
+              <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
+                {" "}
+                Proyectos
+              </button>
+            </Link>
+            <Link href="#Aliados" target="blank">
+              <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
+                {" "}
+                Aliados
+              </button>
+            </Link>
           </div>
           <div className="w-35 h-31 gap-1.5">
             <div className="p-2.5">
@@ -46,15 +53,22 @@ export default function Footer() {
                 Links de ayuda
               </h3>
             </div>
-            <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
-              Contacto
-            </button>
-            <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
-              Grupo de trabajo
-            </button>
-            <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
-              Administradores
-            </button>
+            <Link href="#Contacto" target="_blank">
+              <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
+                Contacto
+              </button>
+            </Link>
+
+            <Link href="#Grupos" target="blank">
+              <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
+                Grupo de trabajo
+              </button>
+            </Link>
+            <Link href="#Administradores" target="blank">
+              <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
+                Administradores
+              </button>
+            </Link>
           </div>
         </article>
         <article className="hidden  lg:flex lg:flex-col w-55.5 h-29 p-2.5 gap-2.5">
@@ -62,13 +76,14 @@ export default function Footer() {
             <h3 className="text-[#135e8c]">Contáctanos:</h3>
           </div>
           <div className="w-50.5 h-11 rounded-full border p-2.5 gap-2.5 border-[#135e8c]">
-            <a
+            <Link
               className="flex text-[#135e8c] w-full h-full"
               href="mailto:sidud@udistrital.edu.co"
+              target="blank"
             >
               <Mail className="mr-2" />
               Ingresa tu correo
-            </a>
+            </Link>
           </div>
         </article>
       </section>
@@ -78,18 +93,21 @@ export default function Footer() {
       lg:w-full lg:max-w-310 lg:h-22 lg:pt-5 lg:pr-2.5 lg:pb-2.5 lg:-2.5 lg:gap-7.5"
       >
         <article className="flex space-x-2">
-          <a href="https://x.com/home">
+          <Link href="https://x.com/home" target="blank">
             <Twitter />
-          </a>
-          <a href="https://web.facebook.com/sidud?locale=es_LA" target="_blank">
+          </Link>
+          <Link
+            href="https://web.facebook.com/sidud?locale=es_LA"
+            target="blank"
+          >
             <Facebook />
-          </a>
-          <a href="https://www.whatsapp.com/?lang=es_LA">
+          </Link>
+          <Link href="https://www.whatsapp.com/?lang=es_LA" target="blank">
             <MessageCircleMore />
-          </a>
-          <a href="https://www.instagram.com/sid.ud/" target="_blank">
+          </Link>
+          <Link href="https://www.instagram.com/sid.ud/" target="blank">
             <Instagram />
-          </a>
+          </Link>
         </article>
       </section>
     </footer>
