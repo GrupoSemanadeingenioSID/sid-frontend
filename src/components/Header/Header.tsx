@@ -36,7 +36,7 @@ export default function Header() {
                 <Image src="/images/logotype/logosid.webp" alt="LogoSid" width={65} height={65} className="w-20 sm:w-30 md:w-30 lg:w-30 h-auto object-contain"/>
             </div>
             {/**Menu PC */}
-            <nav className="hidden xl:flex space-x-6 py-4 xl:px-20 rounded-4xl m-4 bg-white/30 backdrop-blur-md shadow-2xl">
+            <nav className="hidden xl:flex space-x-6 py-4 2xl:px-20 sm:px-8 rounded-4xl m-4 bg-white/30 backdrop-blur-md shadow-2xl">
                 <button className="text-lg lg:text-2xl px-3 font-bold text-gray-900 cursor-pointer">Inicio</button>
                 <button className="text-lg lg:text-2xl px-3 font-bold text-gray-900 cursor-pointer">Quienes somos</button>
                 <button className="text-lg lg:text-2xl px-3 font-bold text-gray-900 cursor-pointer">Cursos</button>
