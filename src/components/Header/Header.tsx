@@ -1,7 +1,15 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 export default function Header() {
+    /**
+     * MEJORAS A ESTE COMPONENTE:
+     * 1. Atomizarlo mas
+     * 2. Añadir funcionalidad al boton de iniciar sesion
+     * 3. Añadir funcionalidad con componentes a las notificaciones
+     * 4. Los colores de los logos y otras cosas del header no contrastan bien con el fondo
+     */
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isNotiOpen, setIsNotiOpen] = useState(false);
     const [isDesktopNotiOpen, setIsDesktopNotiOpen] = useState(false);
@@ -37,11 +45,11 @@ export default function Header() {
             </div>
             {/**Menu PC */}
             <nav className="hidden xl:flex space-x-6 py-4 2xl:px-20 sm:px-8 rounded-4xl m-4 bg-white/30 backdrop-blur-md shadow-2xl">
-                <button className="text-lg lg:text-2xl px-3 font-bold text-gray-900 cursor-pointer">Inicio</button>
-                <button className="text-lg lg:text-2xl px-3 font-bold text-gray-900 cursor-pointer">Quienes somos</button>
-                <button className="text-lg lg:text-2xl px-3 font-bold text-gray-900 cursor-pointer">Cursos</button>
-                <button className="text-lg lg:text-2xl px-3 font-bold text-gray-900 cursor-pointer">Equipos</button>
-                <button className="text-lg lg:text-2xl px-3 font-bold text-gray-900 cursor-pointer">Aliados</button>
+                <Link href="/" className="text-lg lg:text-2xl px-3 font-bold text-gray-900 hover:text-gray-500">Inicio</Link>
+                <Link href="/about" className="text-lg lg:text-2xl px-3 font-bold text-gray-900 hover:text-gray-500">Quienes somos</Link>
+                <Link href="/course" className="text-lg lg:text-2xl px-3 font-bold text-gray-900 hover:text-gray-500">Cursos</Link>
+                <Link href="/team" className="text-lg lg:text-2xl px-3 font-bold text-gray-900 hover:text-gray-500">Equipos</Link>
+                <Link href="/ally" className="text-lg lg:text-2xl px-3 font-bold text-gray-900 hover:text-gray-500">Aliados</Link>
             </nav>
             
             {/** Boton Notis de Escritorio */}
@@ -82,6 +90,7 @@ export default function Header() {
                     </button>
                 </div>
                 {/** Boton de Inicio de Sesion */}
+                {/** TOCA AÑADIR FUNCIONALIDAD A EL BOTON DE INICIAR SESION */}
                 <button className="hidden xl:flex border-4 text-black font-extrabold border-black rounded-4xl p-4 px-5 mx-auto text-2xl whitespace-nowrap cursor-pointer bg-white/20 backdrop-blur-md shadow-2xl">
                     Iniciar Sesion
                 </button>
@@ -115,24 +124,16 @@ export default function Header() {
                          * Se puede hacer un componente boton unico para cada uno
                         */}
                         <Image src="/images/logotype/bluelogo.webp" alt="LogoSidBlue" height={150} width={150} className='py-10'/>
+                        {/** TOCA AÑADIR FUNCIONALIDAD A EL BOTON DE INICIAR SESION */}
                         <button onClick={() => setIsMenuOpen(false)} className="text-xl py-2 border border-[#135e8c] px-4 text-center rounded-3xl text-[#135e8c] font-bold">
                             Iniciar Sesión
                         </button>
-                        <button onClick={() => setIsMenuOpen(false)} className="text-xl py-2 w-full text-center font-bold text-white">
-                            Inicio
-                        </button>
-                        <button onClick={() => setIsMenuOpen(false)} className="text-xl py-2 w-full text-center font-bold text-white">
-                            Quienes somos
-                        </button>
-                        <button onClick={() => setIsMenuOpen(false)} className="text-xl py-2 w-full text-center font-bold text-white">
-                            Cursos
-                        </button>
-                        <button onClick={() => setIsMenuOpen(false)} className="text-xl py-2 w-full text-center font-bold text-white">
-                            Equipos
-                        </button>
-                        <button onClick={() => setIsMenuOpen(false)} className="text-xl py-2 w-full text-center font-bold text-white">
-                            Aliados
-                        </button>
+
+                        <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-xl py-2 w-full text-center font-bold text-white">Inicio</Link>
+                        <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-xl py-2 w-full text-center font-bold text-white">Quienes Somos</Link>
+                        <Link href="/course" onClick={() => setIsMenuOpen(false)} className="text-xl py-2 w-full text-center font-bold text-white">Cursos</Link>
+                        <Link href="/team" onClick={() => setIsMenuOpen(false)} className="text-xl py-2 w-full text-center font-bold text-white">Equipos</Link>
+                        <Link href="/ally" onClick={() => setIsMenuOpen(false)} className="text-xl py-2 w-full text-center font-bold text-white">Aliados</Link>
                     </div>
                 </div>
         </header>
