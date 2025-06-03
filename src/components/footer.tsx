@@ -78,7 +78,8 @@ export default function Footer() {
           <div className="w-50.5 h-11 rounded-full border p-2.5 gap-2.5 border-[#135e8c]">
             <Link
               className="flex text-[#135e8c] w-full h-full"
-              href="mailto:sidud@udistrital.edu.co"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=sidud@udistrital.edu.co&su=Asunto&body=Mensaje"
+              target="_blank"
             >
               <Mail className="mr-2" />
               Ingresa tu correo
