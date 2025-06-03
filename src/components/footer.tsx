@@ -29,18 +29,18 @@ export default function Footer() {
             <div className="w-full h-10 p-2.5 gap-2.5">
               <h3 className="font-bold text-sm text-[#135e8c]">Información</h3>
             </div>
-            <Link href="#Quienes_somos" target="blank">
+            <Link href="#Quienes_somos">
               <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
                 Quienes somos
               </button>
             </Link>
-            <Link href="#Proyectos" target="blank">
+            <Link href="#Proyectos">
               <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
                 {" "}
                 Proyectos
               </button>
             </Link>
-            <Link href="#Aliados" target="blank">
+            <Link href="#Aliados">
               <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
                 {" "}
                 Aliados
@@ -53,18 +53,18 @@ export default function Footer() {
                 Links de ayuda
               </h3>
             </div>
-            <Link href="#Contacto" target="_blank">
+            <Link href="#Contacto">
               <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
                 Contacto
               </button>
             </Link>
 
-            <Link href="#Grupos" target="blank">
+            <Link href="#Grupos">
               <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
                 Grupo de trabajo
               </button>
             </Link>
-            <Link href="#Administradores" target="blank">
+            <Link href="#Administradores">
               <button className="pt-0.5 pr-2.5 pb-0.5 pl-2.5 gap-2.5 text-sm">
                 Administradores
               </button>
@@ -79,7 +79,6 @@ export default function Footer() {
             <Link
               className="flex text-[#135e8c] w-full h-full"
               href="mailto:sidud@udistrital.edu.co"
-              target="blank"
             >
               <Mail className="mr-2" />
               Ingresa tu correo
@@ -93,19 +92,19 @@ export default function Footer() {
       lg:w-full lg:max-w-310 lg:h-22 lg:pt-5 lg:pr-2.5 lg:pb-2.5 lg:-2.5 lg:gap-7.5"
       >
         <article className="flex space-x-2">
-          <Link href="https://x.com/home" target="blank">
+          <Link href="https://x.com/home" target="_blank">
             <Twitter />
           </Link>
           <Link
             href="https://web.facebook.com/sidud?locale=es_LA"
-            target="blank"
+            target="_blank"
           >
             <Facebook />
           </Link>
-          <Link href="https://www.whatsapp.com/?lang=es_LA" target="blank">
+          <Link href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
             <MessageCircleMore />
           </Link>
-          <Link href="https://www.instagram.com/sid.ud/" target="blank">
+          <Link href="https://www.instagram.com/sid.ud/" target="_blank">
             <Instagram />
           </Link>
         </article>
