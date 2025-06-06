@@ -1,7 +1,10 @@
+"use client"
+
 import { Lilita_One } from 'next/font/google';
 import Link from "next/link";
 import CourseCard from "@/components/courses/courseCard";
 import TeamCard from "@/components/team/teamCard";
+import { useState } from 'react';
 
 const lilita = Lilita_One({
   subsets: ["latin"],
@@ -10,6 +13,9 @@ const lilita = Lilita_One({
 });
 
 export default function Home() {
+
+  const [paused, setPaused] = useState(false);
+  const toggleAnimation = () => { setPaused(prev => !prev); }
 
   const courses = [1, 2, 3]
   const team = [
@@ -85,21 +91,20 @@ export default function Home() {
           {/* ARTICULO PARA LOS EQUIPOS*/}
           <article className="
                                 flex flex-col
-                                py-1.25 md:py-2.5 gap-[10px]
+                                py-1.25 md:py-2.5 gap-2.5
                                 w-full
                                 justify-around items-center
-                                overflow-x-auto scroll-snap-x scroll-snap-mandatory scroll-px-4">
+                                overflow-hidden">
 
-            <h2 className="w-[75%] text-center text-2xl font-bold lg:text-3xl">Nuestro equipo</h2>
-
-            <div className="flex justify-between justify-items-start gap-x-5  overflow-x-auto scroll-smooth snap-x snap-mandatory scroll-px-4">
-              {team.map((member, index) => (
-              <TeamCard key={index} {...member}/>
-              
-            ))}
-
+            <h2 className="w-[75%] text-center text-2xl font-bold lg:text-3xl">
+              Nuestro equipo
+            </h2>
+            
+            <div onClick={toggleAnimation} className={`flex flex-row justify-between w-max carousel ${paused ? 'paused' : ''}` }>               
+              {[...team, ...team, ...team].map((member, index) => (
+                <TeamCard key={index} {...member} />
+              ))}
             </div>
-
 
           </article>
         </section>
