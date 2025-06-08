@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
+import { Bell, Menu } from 'lucide-react';
 export default function Header() {
     /**
      * MEJORAS A ESTE COMPONENTE:
@@ -36,26 +37,27 @@ export default function Header() {
     }, [])
     
     return (
-        <header className="fixed top-0 left-0 flex justify-between items-center px-4 py-2 w-full">
+        <header className="fixed top-0 left-1/2 -translate-x-1/2 flex justify-between items-center xl:py-[10px] px-[40px] xl:w-[1210px] w-full">
             {/* Logos */}    
-            <div className="mx-auto px-5 flex items-center space-x-1">
-                <Image src="/images/logotype/Escudo_UD.svg.png" alt="EscudoUD" width={65} height={65} className="w-20 sm:w-30 md:w-30 lg:w-30 h-auto object-contain"/>
+            <div className="gap-[10px] flex items-center space-x-1 xl:w-[159px] xl:h-[48px] w-[121.19px]">
+                <Image src="/images/logotype/Escudo_UD.svg.png" alt="EscudoUD" width={50} height={48} className="xl:w-[50px] w-[36.16px] h-auto object-contain"/>
                 <span className='text-black text-5xl font-extralight'>|</span>
-                <Image src="/images/logotype/logosid.webp" alt="LogoSid" width={65} height={65} className="w-20 sm:w-30 md:w-30 lg:w-30 h-auto object-contain"/>
+                <Image src="/images/logotype/logosid.webp" alt="LogoSid" width={89} height={48} className="xl:w-[89px] w-[65px] h-auto object-contain"/>
             </div>
+
             {/**Menu PC */}
-            <nav className="hidden xl:flex space-x-6 py-4 2xl:px-20 sm:px-8 rounded-4xl m-4 bg-white/30 backdrop-blur-md shadow-2xl">
-                <Link href="/" className="text-lg lg:text-2xl px-3 font-bold text-gray-900 hover:text-gray-500">Inicio</Link>
-                <Link href="/about" className="text-lg lg:text-2xl px-3 font-bold text-gray-900 hover:text-gray-500">Quienes somos</Link>
-                <Link href="/course" className="text-lg lg:text-2xl px-3 font-bold text-gray-900 hover:text-gray-500">Cursos</Link>
-                <Link href="/team" className="text-lg lg:text-2xl px-3 font-bold text-gray-900 hover:text-gray-500">Equipos</Link>
-                <Link href="/ally" className="text-lg lg:text-2xl px-3 font-bold text-gray-900 hover:text-gray-500">Aliados</Link>
+            <nav className="hidden xl:flex w-[600px] h-[42px] items-center justify-center gap-[10px] p-[10px] rounded-[100px] bg-white/5 backdrop-blur-md shadow-sm shadow-black">
+                <Link href="/" className="text-[16px] px-[10px] gap-[10px] font-bold text-[#1A222A] hover:text-gray-500">Inicio</Link>
+                <Link href="/about" className="text-[16px] px-[10px] gap-[10px] font-bold text-[#1A222A] hover:text-gray-500">Quienes somos</Link>
+                <Link href="/course" className="text-[16px] px-[10px] gap-[10px] font-bold text-[#1A222A] hover:text-gray-500">Cursos</Link>
+                <Link href="/team" className="text-[16px] px-[10px] gap-[10px] font-bold text-[#1A222A] hover:text-gray-500">Equipos</Link>
+                <Link href="/ally" className="text-[16px] px-[10px] gap-[10px] font-bold text-[#1A222A] hover:text-gray-500">Aliados</Link>
             </nav>
             
             {/** Boton Notis de Escritorio */}
-            <div className="relative hidden xl:block ml-10 ">
-                <div className="w-15 h-15 flex items-center justify-center rounded-full cursor-pointer mx-auto bg-white/30 backdrop-blur-md shadow-2xl" onClick={() => setIsDesktopNotiOpen(!isDesktopNotiOpen)}>
-                    <Image src="/images/icons/bell.svg" alt="notificación" width={40} height={40}/>
+            <div className="hidden xl:flex">
+                <div className="w-[45px] h-[45px] flex items-center justify-center rounded-full cursor-pointer bg-white/5 backdrop-blur-md shadow-sm shadow-black" onClick={() => setIsDesktopNotiOpen(!isDesktopNotiOpen)}>
+                    <Bell color='#000000'/>
                 </div>
             
             {/** Menu desplegable de PC 
@@ -64,7 +66,7 @@ export default function Header() {
             */}
             
             {isDesktopNotiOpen && (
-            <div className="absolute right-0 mt-2 w-64 border rounded z-50 bg-white/30 backdrop-blur-md shadow-2xl">
+            <div className="absolute right-0 mt-2 w-64 rounded z-50 bg-white/5 backdrop-blur-md shadow-sm shadow-black">
                 <div className="p-4 font-bold border-b text-gray-900">Notificaciones</div>
                 <ul className="p-2 space-y-2 text-sm">
                     <li className="hover:bg-gray-100 p-2 rounded text-gray-900">Tienes una nueva alerta</li>
@@ -74,26 +76,27 @@ export default function Header() {
             </div>
             )}
             </div>
+                <button className="hidden xl:flex border-2 text-[#1A222A] font-extrabold border-[#1A222A] rounded-[100px] p-[10px] text-[16px] whitespace-nowrap cursor-pointer bg-[#0D0D0D4D] backdrop-blur-md shadow-lg shadow-neutral-500 hover:text-gray-300">
+                    Iniciar sesión
+                </button>
 
-            <div className="flex justify-between items-center px-10 w-50 mx-auto">
-                {/** Boton de notificacion */} 
-                <div className="relative xl:hidden flex rounded-full p-2 m-1 w-15 h-15 justify-center bg-white/30 backdrop-blur-md shadow-2xl">
+            {/** Parte movil */}
+            <div className="flex xl:hidden justify-between items-center px-10 w-50">
+                {/** Boton de notificacion movil*/} 
+                <div className="relative flex xl:hidden w-[40px] h-[40px] items-center justify-center rounded-full cursor-pointer bg-white/5 backdrop-blur-md shadow-sm shadow-black">
                     <button onClick={()=>{setIsNotiOpen(!isNotiOpen)}} className='cursor-pointer'>
-                        <Image src="/images/icons/bell.svg" alt='menu' height={40} width={40}/>
+                        <Bell color='#000000'/>
                     </button>
                 </div>
 
                 {/**Boton menu desplegable de movil*/}
-                <div className="relative xl:hidden m-1">
+                <div className="relative flex xl:hidden w-[34.43px] h-[30px]">
                     <button onClick={()=>{setIsMenuOpen(!isMenuOpen)}} className='cursor-pointer'>
-                        <Image src="/images/icons/menu.svg" alt='menu' height={30} width={30}/>
+                        <Menu color="#000000" />
                     </button>
                 </div>
                 {/** Boton de Inicio de Sesion */}
                 {/** TOCA AÑADIR FUNCIONALIDAD A EL BOTON DE INICIAR SESION */}
-                <button className="hidden xl:flex border-4 text-black font-extrabold border-black rounded-4xl p-4 px-5 mx-auto text-2xl whitespace-nowrap cursor-pointer bg-white/20 backdrop-blur-md shadow-2xl">
-                    Iniciar Sesion
-                </button>
             </div>
 
             {/** Desplegable Noti Celular */}
