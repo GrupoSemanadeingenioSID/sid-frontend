@@ -75,8 +75,10 @@ export default function Header() {
                 </ul>
             </div>
             )}
+
+            {/**Iniciar sesion */}
             </div>
-                <button className="hidden xl:flex border-2 text-[#1A222A] font-extrabold border-[#1A222A] rounded-[100px] p-[10px] text-[16px] whitespace-nowrap cursor-pointer bg-[#0D0D0D4D] backdrop-blur-md shadow-lg shadow-neutral-500 hover:text-gray-300">
+                <button className="hidden xl:flex border-2 text-[#1A222A] font-extrabold border-[#1A222A] rounded-[100px] p-[10px] text-[16px] whitespace-nowrap cursor-pointer bg-[#0D0D0D4D] backdrop-blur-md shadow-sm shadow-black hover:text-gray-300">
                     Iniciar sesión
                 </button>
 
