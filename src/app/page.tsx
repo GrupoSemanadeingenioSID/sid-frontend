@@ -1,7 +1,7 @@
-import { Lilita_One } from 'next/font/google';
+import { Lilita_One } from "next/font/google";
 import Link from "next/link";
 import CourseCard from "@/components/courses/courseCard";
-import { link } from 'fs';
+import Footer from "@/components/footer";
 
 const lilita = Lilita_One({
   subsets: ["latin"],
@@ -10,19 +10,19 @@ const lilita = Lilita_One({
 });
 
 export default function Home() {
-
-  const courses = [1, 2, 3]
+  const courses = [1, 2, 3];
 
   const activities = [1,2,3,4]
 
   return (
     <div>
       <header></header> {/* ESPACIO PARA EL COMPONENTE HEADER */}
-
       <main className="">
         {/* SECCION PARA EL BANNER */}
         <section className="bg-[url(/images/banner.webp)] bg-cover bg-center bg-no-repeat h-dvh w-full flex flex-col items-center justify-end lg:h-screen">
-          <div className={`${lilita.className} text-4xl text-center w-full h-2/5 flex items-end justify-center banner-gradient py-7 px-[20%] lg:text-5xl lg:py-16`}>
+          <div
+            className={`${lilita.className} text-4xl text-center w-full h-2/5 flex items-end justify-center banner-gradient py-7 px-[20%] lg:text-5xl lg:py-16`}
+          >
             <p>¡Te damos la bienvenida!</p>
           </div>
         </section>
@@ -57,31 +57,35 @@ export default function Home() {
 
           {/* ARTICULO PARA LOS CURSOS */}
           <article className="flex flex-col gap-5 md:flex-row md:flex-wrap md:justify-between">
-            <h2 className="w-full text-center text-2xl font-bold lg:text-3xl">Cursos disponibles</h2>
+            <h2 className="w-full text-center text-2xl font-bold lg:text-3xl">
+              Cursos disponibles
+            </h2>
 
             {courses.map((course, index) => (
               <CourseCard key={index} />
             ))}
 
-            <Link href="/course"  className="w-full flex items-center justify-end font-bold text-sm lg:text-xl">
-              <p className="px-2.5 py-1.5 border-french-gray border-2 rounded-full hover:scale-105 transition-all">Ver más</p>
+            <Link
+              href="/course"
+              className="w-full flex items-center justify-end font-bold text-sm lg:text-xl"
+            >
+              <p className="px-2.5 py-1.5 border-french-gray border-2 rounded-full hover:scale-105 transition-all">
+                Ver más
+              </p>
             </Link>
           </article>
 
           {/* ARTICULO PARA LOS PROYECTOS */}
-          <article>
-
-          </article>
+          <article></article>
 
           {/* ARTICULO PARA LOS EQUIPOS*/}
-          <article>
-
-          </article>
+          <article></article>
         </section>
-
       </main>
-
-      <footer></footer> {/* ESPACIO PARA EL COMPONENTE FOOTER */}
+      <footer>
+        <Footer />{" "}
+      </footer>{" "}
+      {/* ESPACIO PARA EL COMPONENTE FOOTER */}
     </div>
   );
 }
