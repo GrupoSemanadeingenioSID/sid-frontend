@@ -1,7 +1,8 @@
 import { Lilita_One } from "next/font/google";
 import Link from "next/link";
 import CourseCard from "@/components/courses/courseCard";
-import Footer from "@/components/footer";
+import ProjectCard from '@/components/projects/projectCard'; // Mantener tu importación de ProjectCard
+import Footer from "@/components/footer"; // Mantener la importación de Footer de main
 
 const lilita = Lilita_One({
   subsets: ["latin"],
@@ -12,7 +13,9 @@ const lilita = Lilita_One({
 export default function Home() {
   const courses = [1, 2, 3];
 
-  const activities = [1,2,3,4]
+  // Combinar las variables, manteniendo lo que necesitas de cada rama
+  const projects = [0, 1, 2, 3, 4, 5]; // Tu variable de projects
+  const activities = [1, 2, 3, 4]; // La variable activities de main
 
   return (
     <div>
@@ -32,7 +35,7 @@ export default function Home() {
           {/* ARTICULO PARA LAS ACTIVIDADES */}
           <article>
             <h2 className="w-full text-center text-2xl font-bold lg:text-3xl">Actividades Programadas</h2>
-            
+
             <div className="flex flex-row flex-wrap gap-4 mt-5 justify-around">
               {activities.map((activity, index) => (
                 <Link key={index} href={""}
@@ -41,18 +44,18 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <img
-                  src="/images/activity/ilustracion.webp"
-                  alt="Lectura"
-                  className="absolute inset-0 w-full h-full object-cover z-0"
+                    src="/images/activity/ilustracion.webp"
+                    alt="Lectura"
+                    className="absolute inset-0 w-full h-full object-cover z-0"
                   />
                   <div className="absolute bottom-0 z-10 w-full flex flex-col bg-gradient-to-t from-black/90 via-black/45 to-transparent mt-auto p-3 pt-3">
-                  <h3 className="text-center text-[#CED5DC] font-bold font-nunito md:text-xl lg:text-2xl">Lectura</h3>
-                  <p className="text-center text-[#CED5DC] font-normal font-nunito text-[10px] md:text-[14px]">Reunion para leer clasico literatura</p>
+                    <h3 className="text-center text-[#CED5DC] font-bold font-nunito md:text-xl lg:text-2xl">Lectura</h3>
+                    <p className="text-center text-[#CED5DC] font-normal font-nunito text-[10px] md:text-[14px]">Reunion para leer clasico literatura</p>
                   </div>
                 </Link>
               ))}
             </div>
-            
+
           </article>
 
           {/* ARTICULO PARA LOS CURSOS */}
@@ -76,7 +79,17 @@ export default function Home() {
           </article>
 
           {/* ARTICULO PARA LOS PROYECTOS */}
-          <article></article>
+          {/* Mantener la sección de proyectos de tu rama 'projects' */}
+          <article>
+            <h2 className="w-full text-center text-2xl lg:text-3xl font-bold mb-10">Nuestros Proyectos</h2>
+            <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 aspect-ratio-3/2 xl:grid-cols-2">
+              {projects.map((project, index) => (
+                <div key={index}>
+                  <ProjectCard/>
+                </div>
+              ))}
+            </div>
+          </article>
 
           {/* ARTICULO PARA LOS EQUIPOS*/}
           <article></article>
