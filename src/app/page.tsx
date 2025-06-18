@@ -12,7 +12,7 @@ const lilita = Lilita_One({
 export default function Home() {
 
   const courses = [1, 2, 3];
-  const projects = [0, 1, 2]; 
+  const projects = [0, 1, 2, 3, 4, 5]; 
 
   return (
     <div>
@@ -49,9 +49,9 @@ export default function Home() {
           {/* ARTICULO PARA LOS PROYECTOS */}
           <article>
             <h2 className="w-full text-center text-2xl lg:text-3xl font-bold mb-10">Nuestros Proyectos</h2>
-            <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 aspect-ratio-3/2 xl:grid-cols-2">
               {projects.map((project, index) => (
-                <div key={index} className={index === 0 ? 'md:col-span-full' : ''}>
+                <div key={index}>
                   <ProjectCard/>
                 </div>
               ))}
