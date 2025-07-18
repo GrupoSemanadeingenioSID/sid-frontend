@@ -64,25 +64,3 @@ body {
 .border-french-gray {
   border-color: var(--french-gray);
 }
-
-
-/* Carruseles */
-.carousel {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 10s linear infinite;
-  animation-play-state: running;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.carousel.paused  {
-  animation-play-state: paused; /* Pause carousel when user hovers */
-}
