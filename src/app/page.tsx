@@ -1,6 +1,8 @@
 import { Lilita_One } from "next/font/google";
+import Marquee from "react-fast-marquee";
 import Link from "next/link";
 import CourseCard from "@/components/courses/courseCard";
+import TeamCard from "@/components/team/teamCard";
 import Footer from "@/components/footer";
 
 const lilita = Lilita_One({
@@ -10,9 +12,42 @@ const lilita = Lilita_One({
 });
 
 export default function Home() {
+
   const courses = [1, 2, 3];
 
   const activities = [1,2,3,4]
+  const equipo = [
+    {
+      nombre: "Angélica",
+      rol: "Desarrolladora",
+      foto: "/images/team/angelica.webp",
+      alt: "Foto de Angélica"
+    },
+    {
+      nombre: "Diego",
+      rol: "Desarrollador",
+      foto: "/images/team/diego.webp",
+      alt: "Foto de Diego"
+    },
+        {
+      nombre: "Javier",
+      rol: "Desarrollador",
+      foto: "/images/team/javier.webp",
+      alt: "Foto de Javier"
+    },
+    {
+      nombre: "Juan Carlos",
+      rol: "Desarrollador",
+      foto: "/images/team/juancarlos.webp",
+      alt: "Foto de Juan Carlos"
+    },
+        {
+      nombre: "Sara",
+      rol: "Desarrolladora",
+      foto: "/images/team/sara.webp",
+      alt: "Foto de Sara"
+    },
+  ];
 
   return (
     <div>
@@ -79,7 +114,20 @@ export default function Home() {
           <article></article>
 
           {/* ARTICULO PARA LOS EQUIPOS*/}
-          <article></article>
+          
+          <article className="flex flex-col py-1.25 md:py-2.5 gap-2.5 justify-around items-center overflow-hidden">
+
+            <h2 className="w-full text-center text-2xl font-bold lg:text-3xl">
+              Nuestro equipo
+            </h2>
+            
+            <Marquee pauseOnHover={true} className="min-h-61 sm:min-h-67 md:min-h-74 lg:min-h-80 xl:min-h-91" style={{minHeight: "275px", }}>
+              {equipo.map((miembro, index) => (
+                <TeamCard nombre={miembro.nombre} rol={miembro.rol} foto={miembro.foto} key={index}></TeamCard>
+              ))}
+            </Marquee>
+
+          </article>
         </section>
       </main>
       <footer>
